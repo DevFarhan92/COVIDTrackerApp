@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Covid App</title>
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+	<script type="text/javascript" src="java/script.js"></script>
+</head>
+<body >
+	<div ng-app="myApp" ng-controller="myCtrl"  class="jumbotron">
+		<h1 class="pt-6 text-center ">Stay Home Stay Safe</h1>
+		<p class="text-justified"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet ornare tellus, non efficitur lectus. Morbi euismod massa nec scelerisque faucibus. Praesent elit augue, malesuada nec ante et, consectetur tincidunt leo. Pellentesque non maximus mi. Nulla luctus, libero sed rutrum accumsan, mauris velit iaculis nibh, vel feugiat nunc sapien ac augue. Sed libero odio, volutpat sit amet sapien id, accumsan placerat justo. Etiam vestibulum mi ac lectus elementum, at consequat nulla efficitur. Donec scelerisque mattis diam, ac ullamcorper nulla sagittis at. Duis porttitor ultrices pellentesque.</p>
+	<div class="container">
+	  <div class="row text-center ">
+	    <div class="col-md-4 ">
+	      <div class="card bg-warning text-white">
+	      	<div class="card-body">
+	      	<h3>Confirmed Cases </h3>
+	      	<h3>{{all_data.confirmed.value}} </h3>
+	      	</div>
+
+	      </div>
+	    </div>
+	    <div class="col-md-4">
+	     <div class="card bg-success text-white">
+	      	<div class="card-body">
+	      	<h3 class="">Recovered Cases</h3>
+	      	<h3>{{all_data.recovered.value}} </h3>
+	      	</div>
+	      </div>
+	    </div>
+	    <div class="col-md-4">
+	      <div class="card bg-danger text-white">
+	      	<div class="card-body">
+	      	<h3>Death cases</h3>
+	      	<h3>{{all_data.deaths.value}} </h3>
+	      	</div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <input type="text" class="form-control mt-4" placeholder="Enter Country Name" ng-model="c" ng-change ="get_c_data()">
+	  <h1 class="text-center mt-4 text-uppercase"> {{c}}  status</h1>
+	  <div class="row text-center mt-4" ng-if="c_data">
+	    <div class="col-md-4 ">
+	      <div class="card bg-warning text-white">
+	      	<div class="card-body">
+	      	<h3>Confirmed Cases </h3>
+	      	<h3>{{c_data.confirmed.value}} </h3>
+	      	</div>
+
+	      </div>
+	    </div>
+	    <div class="col-md-4">
+	     <div class="card bg-success text-white">
+	      	<div class="card-body">
+	      	<h3 class="">Recovered Cases</h3>
+	      	<h3>{{c_data.recovered.value}} </h3>
+	      	</div>
+	      </div>
+	    </div>
+	    <div class="col-md-4">
+	      <div class="card bg-danger text-white">
+	      	<div class="card-body">
+	      	<h3>Death cases</h3>
+	      	<h3>{{c_data.deaths.value}} </h3>
+	      	</div>
+	      </div>
+	    </div>
+	  </div>
+
+	</div>
+
+	</div>
+<!-- main div close -->
+</body>
+</html>
